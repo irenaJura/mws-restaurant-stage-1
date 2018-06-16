@@ -282,3 +282,113 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== Media Queries Home ====================== */
+
+@media only screen and (max-width: 780px) {
+    #restaurants-list li {
+        margin: 5px;
+        padding: 10px 15px
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    #restaurants-list {
+      padding-top: 0;
+    }
+
+    #restaurant-container {
+      padding: 130px 20px 10px;
+    }
+
+    #restaurant-name {
+      margin: 15px 0 15px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    nav h1 a {
+        line-height: 2;
+    }
+
+    .filter-options {
+        justify-content: center;
+    }
+
+    #restaurants-list {
+      padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #restaurants-list {
+        padding: 0;
+    }
+
+    #restaurants-list li {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+}
+
+
+/* ====================== Media Queries Info ====================== */
+
+@media only screen and (max-width: 830px) {
+    #restaurant-container {
+      padding: 130px 20px 10px;
+    }
+
+    #restaurant-name {
+      margin: 15px 0 15px;
+    }
+
+    #reviews-container {
+      padding: 0px 20px 80px;
+    }
+
+    .inside #footer a {
+      padding: 0 5px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    #breadcrumb, #restaurant-container, #reviews-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .inside #map-container {
+      height: 300px;
+      position: static;
+      display: flex;
+      order: 1;
+      width: 90%;
+      margin: 40px auto;
+    }
+
+    #reviews-container {
+      padding-bottom: 20px;
+    }
+
+    .inside #footer {
+      width: calc(100% - 50px);
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #restaurant-address, #restaurant-hours {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+     .inside #map-container, #restaurant-container, #reviews-container {
+      padding-left: 0;
+      padding-right: 0;
+     }
+}
