@@ -90,9 +90,12 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = restaurant.name + ' Info Page';
+  image.style.borderRadius = '20px 0 20px 0';
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
+  cuisine.style.padding = '10px 0';
+  cuisine.style.color = '#fff';
 
   // fill operating hours
   if (restaurant.operating_hours) {
@@ -150,15 +153,21 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.style.borderRadius = "20px 0 20px 0";
+
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  li.appendChild(name);
+
+  const box = document.createElement('p');
+  li.appendChild(box);
+  box.appendChild(name);
 
   const date = document.createElement('p');
-  date.innerHTML = review.date;
-  li.appendChild(date);
+  date.innerHTML = review.date ;
+  box.appendChild(date);
 
   const rating = document.createElement('p');
+  rating.className = "ratings";
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
